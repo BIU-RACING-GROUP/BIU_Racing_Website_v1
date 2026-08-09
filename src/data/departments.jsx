@@ -21,7 +21,7 @@ export const departments = [
   {
     key: "mechanical",
     dname: "Mechanical",
-    lead: "Benny Provetorov",
+    lead: "Benny Provatorov",
     body: "Chassis, bodywork, suspension and vehicle dynamics. This department turns concept sketches into the physical structure the car is built around.",
     icon: (props) => (
       <svg className="icon" viewBox="0 0 24 24" {...props}>
