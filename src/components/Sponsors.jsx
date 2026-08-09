@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const tiers = [
   {
     key: "platinum",
@@ -57,6 +59,12 @@ const tiers = [
 ];
 
 export default function Sponsors() {
+  const [activeKey, setActiveKey] = useState(null);
+
+  function handleSelect(key) {
+    setActiveKey((prev) => (prev === key ? null : key));
+  }
+
   return (
     <section id="sponsors">
       <div className="checker"></div>
@@ -76,7 +84,11 @@ export default function Sponsors() {
 
         <div className="tier-grid">
           {tiers.map((t) => (
-            <div className={`tier ${t.key}`} key={t.key}>
+            <div
+              className={`tier ${t.key}${activeKey === t.key ? " active" : ""}`}
+              key={t.key}
+              onClick={() => handleSelect(t.key)}
+            >
               <div className="tier-top">{t.icon}</div>
               <div className="tier-name">{t.name}</div>
               <div className="price">{t.price}</div>

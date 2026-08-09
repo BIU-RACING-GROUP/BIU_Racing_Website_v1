@@ -3,6 +3,7 @@ import { updates } from "../data/updates.js";
 
 export default function Updates() {
   const [index, setIndex] = useState(0);
+  const [expandedId, setExpandedId] = useState(null);
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -57,7 +58,13 @@ export default function Updates() {
           </div>
           <div className="carousel" ref={trackRef}>
             {updates.map((u) => (
-              <div className="carousel-item" key={u.id}>
+              <div
+                className={`carousel-item${expandedId === u.id ? " expanded" : ""}`}
+                key={u.id}
+                onClick={() =>
+                  setExpandedId((prev) => (prev === u.id ? null : u.id))
+                }
+              >
                 <span className="date">{u.date}</span>
                 <div className="head-row">
                   <span className={`cat-pill cat-${u.category}`}>
@@ -96,7 +103,7 @@ export default function Updates() {
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.4" cy="6.6" r="1" fill="white" stroke="none" />
               </svg>
-              Follow on Instagram
+              <span className="social-btn-label">Follow on Instagram</span>
             </a>
             <a href="#" className="social-btn li">
               <svg viewBox="0 0 24 24">
@@ -107,7 +114,7 @@ export default function Updates() {
                   fill="white"
                 />
               </svg>
-              Follow on LinkedIn
+              <span className="social-btn-label">Follow on LinkedIn</span>
             </a>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="contact-spotlight"></div>
       <img
         className="contact-car"
-        src="/assets/car-outline-2.png"
+        src="/assets/car-white-outline.svg"
         alt=""
         aria-hidden="true"
       />
