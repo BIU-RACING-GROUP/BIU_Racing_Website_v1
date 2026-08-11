@@ -6,6 +6,7 @@ const trackItems = [...mediaItems, ...mediaItems];
 export default function Media() {
   const [featuredIndex, setFeaturedIndex] = useState(null);
   const [slideIndex, setSlideIndex] = useState(0);
+  const [isPortrait, setIsPortrait] = useState(false);
   const gridRef = useRef(null);
   const skipAnim = useRef(false);
 
@@ -67,10 +68,18 @@ export default function Media() {
 
         {featuredIndex !== null && (
           <div className="media-featured">
-            <div className="big-wrap animate" key={featuredIndex}>
+            <div
+              className={`big-wrap animate${isPortrait ? " portrait" : ""}`}
+              key={featuredIndex}
+            >
               <img
                 src={mediaItems[featuredIndex].src}
                 alt={mediaItems[featuredIndex].alt}
+                onLoad={(e) =>
+                  setIsPortrait(
+                    e.target.naturalHeight > e.target.naturalWidth
+                  )
+                }
               />
               <button
                 className="modal-close"

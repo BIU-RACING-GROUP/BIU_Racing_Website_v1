@@ -9,9 +9,9 @@ export default function Hero() {
 
       <div className="hero-meta">
         <div className="tag">
-          Chassis
+          Motor
           <br />
-          <b>Fully Electric</b>
+          <b>Electric</b>
         </div>
         <div className="tag">
           Target Race

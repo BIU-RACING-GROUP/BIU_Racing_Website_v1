@@ -2,6 +2,8 @@ export const captain = {
   key: "captain",
   title: "Team Captain",
   lead: "Shahar Admoni",
+  image: "/assets/shahar.png",
+  imagePosition: "bottom",
   body: "Sets the direction for the whole team - coordinating across all five departments, owning the competition timeline, and making sure every group is building toward the same car.",
   icon: (props) => (
     <svg
@@ -22,6 +24,8 @@ export const departments = [
     key: "mechanical",
     dname: "Mechanical",
     lead: "Benny Provatorov",
+    image: "/assets/benny.png",
+    imageScale: 1.5,
     body: "Chassis, bodywork, suspension and vehicle dynamics. This department turns concept sketches into the physical structure the car is built around.",
     icon: (props) => (
       <svg className="icon" viewBox="0 0 24 24" {...props}>
@@ -33,6 +37,8 @@ export const departments = [
     key: "electrical",
     dname: "Electrical",
     lead: "Rotem Sillam",
+    image: "/assets/rotem.png",
+    imagePosition: "bottom",
     body: "High Voltage, Low Voltage, Motor and Inverter sub-teams. Responsible for the full electric drivetrain that powers the car.",
     icon: (props) => (
       <svg className="icon" viewBox="0 0 24 24" {...props}>
@@ -44,6 +50,8 @@ export const departments = [
     key: "embedded",
     dname: "Embedded Systems",
     lead: "Michelle Tobias",
+    image: "/assets/michelle.png",
+    imagePosition: "bottom",
     body: "Builds the car's electronic control systems and firmware - the software layer that keeps every other department's hardware talking to each other.",
     icon: (props) => (
       <svg className="icon" viewBox="0 0 24 24" {...props}>
@@ -56,6 +64,9 @@ export const departments = [
     key: "operations",
     dname: "Operations",
     lead: "Tair Sackstein",
+    image: "/assets/tair.png",
+    imagePosition: "30% 55%",
+    imageScale: 1.65,
     body: "Runs the business side of the team - partnerships, sponsorships, budgeting and logistics - so the technical departments can focus on building.",
     icon: (props) => (
       <svg className="icon" viewBox="0 0 24 24" {...props}>
@@ -68,6 +79,8 @@ export const departments = [
     key: "product",
     dname: "Product Mgmt",
     lead: "Product Team",
+    image: "/assets/ido.png",
+    imagePosition: "bottom",
     body: "Keeps the build on schedule - tracking milestones across departments and making sure design decisions stay aligned with the competition roadmap.",
     icon: (props) => (
       <svg className="icon" viewBox="0 0 24 24" {...props}>

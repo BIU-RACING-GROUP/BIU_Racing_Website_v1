@@ -92,7 +92,12 @@ export default function Updates() {
             the car come to life in real time.
           </p>
           <div className="loop-actions">
-            <a href="#" className="social-btn ig">
+            <a
+              href="https://www.instagram.com/biu_racing?igsh=Mmxra2ZuMnlwdzEz&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-btn ig"
+            >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -105,7 +110,12 @@ export default function Updates() {
               </svg>
               <span className="social-btn-label">Follow on Instagram</span>
             </a>
-            <a href="#" className="social-btn li">
+            <a
+              href="https://www.linkedin.com/company/bar-ilan-racing/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-btn li"
+            >
               <svg viewBox="0 0 24 24">
                 <rect x="3" y="9" width="3.4" height="10" fill="white" />
                 <circle cx="4.7" cy="5" r="2" fill="white" />

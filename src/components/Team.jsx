@@ -69,12 +69,34 @@ export default function Team() {
               <div className="icon-wrap">
                 {active.icon ? active.icon() : null}
               </div>
-              <h3>{active.title || active.dname}</h3>
-              <div className="dlead">{active.lead}</div>
-              <p>{active.body}</p>
+              {active.image && (
+                <div className="dept-panel-photo-wrap">
+                  <img
+                    className="dept-panel-photo"
+                    src={active.image}
+                    alt={active.lead}
+                    style={{
+                      objectPosition: active.imagePosition || "center",
+                      ...(active.imageScale && {
+                        transform: `scale(${active.imageScale})`,
+                        transformOrigin: active.imagePosition || "center",
+                      }),
+                    }}
+                  />
+                </div>
+              )}
+              <div className="dept-panel-body">
+                <h3>{active.title || active.dname}</h3>
+                <div className="dlead">{active.lead}</div>
+                <p>{active.body}</p>
+              </div>
             </>
           )}
         </div>
+        <div
+          className={`dept-panel-backdrop${active ? " open" : ""}`}
+          onClick={() => setActiveKey(null)}
+        ></div>
 
         <div className="join-panel">
           <div>
